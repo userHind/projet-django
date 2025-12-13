@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+<html lang="en">
+<head>
+    
+    <title>Registers of City Hall's System Management</title>
+ 
+</head>
+
+<body> <section class="about" id="about">
+
+    
+    <div class="row">
+
+         <div class="image" id="image" >
+         <img src={% static 'image/5.jpg' %} alt="" width="400">
+        </div>
+     <div class="content">
+        <h3> > Birth Register ?</h3>
+        <p> >> pour ajouter un registre <br/> voici le formulaire </p>
+        <a href="{% url 'Bregistre' %}" class="btn"> ++ Add birth Register </a>
+        <p> >> pour voir le registre </p>
+        <a href=" http://127.0.0.1:8000/admin/event/registrenaissances/" class="btn"> Birth Registers </a>
+        
+     </div>
+   
+    </div>
+   
+
+</section>
+
+
+<section class="about" id="about">
+
+   <div class="row">
+
+    <div class="image" id="image" >
+        <img src={% static 'image/mariage.jpg' %} alt="" width="400">
+    </div>
+    <div class="content">
+        <h3> > Wedding Register ?</h3>
+        <p> >> pour ajouter un registre <br/> voici le formulaire </p>
+        <a href="{% url 'Wregistre' %}" class="btn"> ++ Add wedding Register </a>
+        <p> >> pour voir le registre </p>
+        <a href=" http://127.0.0.1:8000/admin/event/registremariages/" class="btn"> Wedding Registera </a>
+        
+       
+       
+    </div>
+   </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <div class="row">
+ 
+     <div class="image" id="image" >
+         <img src={% static 'image/grave.jpg' %} alt="" width="400">
+     </div>
+     <div class="content">
+         <h3> > Death Register?</h3>
+         <p> >> pour ajouter un registre <br/> voici le formulaire </p>
+         <a href="{% url 'Dregistre' %}" class="btn"> ++ Add death Register </a>
+         <p> >> pour voir le registre </p>
+        <a href="http://127.0.0.1:8000/admin/event/registredec%C3%A9s/" class="btn"> Death Registers </a>
+     </div>
+    </div>
+
+</section>
+</body>
+</html>
+{% endblock content %}

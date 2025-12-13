@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+<html lang="en">
+<head>
+    
+    <title>Registers of City Hall's System Management</title>
+ 
+</head>
+
+<body>
+
+<section class="home" id="home" >
+    
+    <div class="content">
+        <h3> > for update</h3>
+        <p> >> pour modifier les actes d'états civils</p>
+        <a href="http://127.0.0.1:8000/admin/event/birth/" class="btn">Update birth certificate</a>
+        <a href="http://127.0.0.1:8000/admin/event/wedding/" class="btn">Update wedding certificate</a>
+        <a href="http://127.0.0.1:8000/admin/event/death/" class="btn">Update death certificate</a>
+        
+     
+    </div>
+   
+
+</section>
+</body>
+</html>
+{% endblock content %}

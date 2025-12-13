@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+<html lang="en">
+<head>
+    <title>Death Certificate</title>
+
+</head>
+<body>
+
+<form method="POST"> 
+    <section class="page-header" id="page-header" >
+
+     <div class="content">
+        <h3 style="color: #4aa6d8;"> <span style="color: #E6A24C;">Death</span> Certificate</h3>
+     </div>
+
+    </section>
+
+    <section class="inscription" id="inscription">
+     <div class="form-container">
+         <br/>
+         <p>Veuillez remplir ce formulaire afin d'enregistrer un nouveau-né.
+            <br/><br/>* Tous les champs sont obligatoires !
+         </p>
+         <hr>
+         {% csrf_token %}
+         {{df}}
+         
+    </div>
+    <div class="clearfix">
+        <input type="submit" value="save"> 
+        </div>
+     </section>
+    
+</form> 
+</body>
+</html>
+{% endblock content %}
+

@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+<html lang="en">
+    <footer class="footer">
+
+
+        <div class="links">
+            <a href="{% url 'index' %}">Welcome</a>
+            <a href="{% url 'about' %}">Registration of Civil Status Documents</a>
+            <a href="{% url 'about' %}" >Registers  </a>
+            <a href="{% url 'update' %}">Updating Civil Status Records</a>
+            <a href="{% url 'statistics' %}">Statistics of Civil Status</a>
+            
+        </div>
+
+        <div class="credit">Réalisé par Laouici Hind | Maouche Mounir | Ben bordi Takieddine | Copyright © 2022, Tous droits réservés</div>
+
+    </footer>
+</html>
+    {% endblock content %}

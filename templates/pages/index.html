@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+<html lang="en">
+<head>
+    
+    <title>City Hall's System Management</title>
+ 
+</head>
+
+<body>
+
+    <section class="about" id="about">
+
+    
+    <div class="row">
+
+         <div class="image" id="image" >
+         <img src={% static 'image/registres.jpg' %} alt="" width="400">
+        </div>
+     <div class="content">
+        <h3> > City Hall's System Management <br/><br/>   Welcome officer ! </h3> 
+     
+        <p> >> pour enregistrer un acte d'ètat civil <br/> voici les formulaires </p>
+        <a href="{% url 'birth' %}" class="btn"> ++ Add birth certificate </a>
+        <a href="{% url 'wedding' %}" class="btn"> ++ Add wedding certificate </a>
+        <a href="{% url 'death' %}" class="btn"> ++ Add death certificate </a>
+        
+     </div>
+   
+    </div>
+   
+
+</section>
+
+
+<section class="about" id="about">
+
+   <div class="row">
+
+    <div class="image" id="image" >
+        <img src={% static 'image/archives.jpg' %} alt="" width="400">
+    </div>
+    <div class="content">
+        <h3> > for update</h3>
+        <p> >> pour modifier les actes d'états civils</p>
+        <a href="{% url 'update' %}" class=" btn btn-secondary">Updating of civil status records</a>
+    
+    </div>
+   </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h3 class="sub-heading" style="text-align: left;"> for search</h3>
+    <h1 class="heading" style="text-align: left;"> > <span>check this</span> ! </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src={% static 'image/home.jpg' %} alt="">
+        </div>
+
+        <div class="content">
+            <h3> > vous cherchez un acte ?</h3>
+           
+            <br><br>
+            <div>
+                <p> >> all certificates are here</p>
+                <a href="http://127.0.0.1:8000/admin/event/birth/" class="btn"> birth certificate</a>
+                <a href="http://127.0.0.1:8000/admin/event/wedding/" class="btn">wedding certificate</a>
+                <a href="http://127.0.0.1:8000/admin/event/death/" class="btn">death certificate</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="about" id="about">
+
+    <h3 class="sub-heading" style="text-align: left;"> for Registers</h3>
+    <h1 class="heading" style="text-align: left;"> > <span>check this</span> ! </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src={% static 'image/registre.jpg' %} alt="">
+        </div>
+
+        <div class="content">
+            <h3> >> add or view register?</h3>
+            <p>this will help
+            </p>
+            <br><br>
+            <div>
+            <a href="{% url 'about' %}" class="btn">vous trouverez les registres ici <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <h3 class="sub-heading" style="text-align: left;"> for statistics</h3>
+    <h1 class="heading" style="text-align: left;"> > <span>check this</span> ! </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src={% static 'image/archive.jpg' %} alt="">
+        </div>
+
+        <div class="content">
+            <h3> >> pour les statistiques  </h3>
+            <p>this will help
+            </p>
+            <br><br>
+            <div>
+            <a href="{% url 'statistics' %}" class="btn">vous trouverez les statistique ici <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+{% comment %}
+ <h4> commentaire! </h4>
+{% endcomment %} 
+</html>
+{% endblock content %}
+
+
+

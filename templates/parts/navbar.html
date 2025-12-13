@@ -1,0 +1,39 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
+<html lang="en">
+<body>
+    <header class="header">
+        <a href="{% url 'index' %}" class="logo">
+            <img src={% static 'image/hall.png' %} alt="">
+        </a>
+
+      
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a >Civil Status records</a>
+                    <ul class="sous-menu">
+                        <a href="{% url 'birth' %}" class="butn">for birth certificate</a>
+                        <a href="{% url 'wedding' %}" class="butn">for wedding certificate</a>
+                        <a href="{% url 'death' %}" class="butn">for death certificate</a>
+                    </ul>
+                </li>
+                <li><a href="{% url 'about' %}" >Registers  </a></li>
+                <li><a href="{% url 'statistics' %}">statistics</a></li>
+            </ul>
+        
+        </nav>
+        <div class="icons">
+            <div class="signup-group">
+                <i class="fas fa-user-circle" id="user-btn"></i>
+                <a href="{% url 'update' %}">Update</a>
+            </div>
+        </div>
+
+      
+    </header>
+</body>
+</html>
+{% endblock content %}
