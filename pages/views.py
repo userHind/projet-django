@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from .models import Login
 from .forms import LoginForm
+ # from django.http import HttpResponse 
  
 # Create your views here.
 def index(request):
     return render(request, 'pages/index.html')
 
-
+# si affichage httpresponse('helloworld')
  
 def update(request):
     return render(request, 'pages/update.html')
